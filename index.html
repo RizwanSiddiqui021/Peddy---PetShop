@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+    <style>
+      * {
+        font-family: "Lato", sans-serif;
+      }
+    </style>
+    <title>Peddy</title>
+  </head>
+  <body>
+    <header>
+      <!-- navbar-section-start -->
+      <nav
+        class="flex items-center justify-between w-11/12 mx-auto my-4 lg:my-6"
+      >
+        <div class="flex gap-1 items-center justify-center">
+          <img class="w-[32px]" src="images/logo.png" alt="" />
+          <h1 class="text-3xl font-black">Peddy</h1>
+        </div>
+        <div class="hidden lg:flex gap-4 lg:gap-12 justify-center items-center">
+          <a
+            class="text-xl text-[#131313] font-medium hover:text-[#0E7A81] hover:underline"
+            href="#"
+            >Home</a
+          >
+          <a
+            class="text-xl text-[#131313] font-medium hover:text-[#0E7A81] hover:underline"
+            href="#"
+            >Shop</a
+          >
+          <a
+            class="text-xl text-[#131313] font-medium hover:text-[#0E7A81] hover:underline"
+            href="#"
+            >Contact</a
+          >
+        </div>
+        <div class="hidden lg:w-[128px] lg:flex justify-end">
+          <a href="#">
+            <img
+              class="w-[40px] border-2 rounded-full p-1 hover:border-[#0E7A81]"
+              src="images/user.png"
+              alt=""
+            />
+          </a>
+        </div>
+
+        <div class="block lg:hidden">
+          <div class="drawer drawer-end">
+            <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+            <div class="drawer-content">
+              <!-- Page content here -->
+              <label for="my-drawer-4" class="drawer-button"
+                ><img class="w-[40px]" src="images/bars.png" alt=""
+              /></label>
+            </div>
+            <div class="drawer-side">
+              <label
+                for="my-drawer-4"
+                aria-label="close sidebar"
+                class="drawer-overlay"
+              ></label>
+              <ul class="menu bg-base-200 text-base-content min-h-full w-48">
+                <!-- Sidebar content here -->
+                <li><a>Home</a></li>
+                <li><a>Shop</a></li>
+                <li><a>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- navbar-section-end -->
+    </header>
+    <main>
+      <!-- banner-section-start -->
+      <section class="mt-12 lg:mt-20 flex flex-col justify-center items-center">
+        <div
+          class="max-w-[750px] mx-auto flex flex-col justify-center items-center"
+        >
+          <div class="flex justify-center items-baseline mb-6 lg:mb-8">
+            <h3 class="text-[#13131399] text-xl lg:text-2xl font-bold">
+              Bringing Families Together
+            </h3>
+            <img class="w-8" src="images/heart.png" alt="" />
+          </div>
+          <h1
+            class="text-[#131313] text-3xl lg:text-6xl font-black text-center mb-4 lg:mb-8"
+          >
+            Your Path to Adoption<br />Starts Here
+          </h1>
+          <p class="text-[#131313] text-center px-6 mb-6 lg:mb-8">
+            A place where you can get a variety of pets, from dogs and cats to
+            exotic animals. We support adopters with resources and guidance to
+            ensure a smooth transition for their new furry friends.
+          </p>
+          <a
+            class="text-[#FFFFFF] text-xl lg:text-2xl font-bold"
+            href="#adopt-section"
+            ><button
+              class="bg-[#0E7A81] border-none rounded-xl px-8 py-4 hover:bg-[#549096]"
+            >
+              View More
+            </button></a
+          >
+        </div>
+        <div class="mt-8">
+          <img src="images/pet.webp" alt="" />
+        </div>
+      </section>
+      <!-- banner-section-end -->
+
+      <!-- adopt-section-start -->
+      <section id="adopt-section">
+        <!-- adopt-title-container-start -->
+        <div class="max-w-[620px] mx-auto my-8 lg:my-16 text-center">
+          <h1 class="text-[#131313] text-3xl lg:text-4xl font-black">
+            Adopt Your Best Friend
+          </h1>
+          <p class="text-[#131313B3] mt-6 mb-8 px-6">
+            Adopting a pet gives a homeless animal a loving home & brings
+            companionship into your life. It's a rewarding way to make a
+            difference & gain a loyal friend for life.
+          </p>
+        </div>
+        <!-- adopt-title-container-end -->
+
+        <!-- category-buttons-container-start -->
+        <div
+          id="category-buttons-container"
+          class="w-11/12 mx-auto grid grid-cols-2 lg:grid-cols-4 gap-6"
+        ></div>
+        <!-- category-buttons-container-end -->
+
+        <!-- best-deal-container-start -->
+        <div class="w-11/12 mx-auto my-8 flex justify-between items-center">
+          <h4 class="text-[#131313] text-xl lg:text-2xl font-black">
+            Best Deal For You
+          </h4>
+          <button
+            onclick="loadSortedData()"
+            id="sort-button"
+            class="bg-[#0E7A81] border-none rounded-xl text-white text-lg lg:text-xl font-bold px-6 py-4 hover:bg-[#549096]"
+          >
+            Sort by Price
+          </button>
+        </div>
+        <!-- best-deal-container-start -->
+      </section>
+      <!-- adopt-section-end -->
+
+      <!-- pet-cards-and-liked-pets-container-start -->
+      <div
+        class="w-11/12 mx-auto grid grid-cols-1 lg:grid-cols-4 gap-2 lg:gap-6"
+      >
+        <div
+          id="cards-container"
+          class="border-2 border-[#1313131A] rounded-xl p-6 lg:col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          <div id="spinner" class="col-span-3 flex justify-center">
+            <span class="loading loading-spinner loading-lg"></span>
+          </div>
+        </div>
+        <div
+          id="liked-images-container"
+          class="border-2 border-[#1313131A] rounded-xl lg:col-span-1 grid grid-cols-2 content-start gap-6 p-6"
+        ></div>
+      </div>
+      <!-- pet-cards-and-liked-pets-container-end -->
+
+      <!-- deitals-modal-start -->
+      <div id="details-modal"></div>
+      <!-- details-modal-end -->
+
+      <!-- adopt-modal-star -->
+      <div id="adopt-modal"></div>
+      <!-- adopt-modal-end -->
+    </main>
+    <!-- footer-start -->
+    <footer class="footer bg-[#131313] text-neutral-content py-12 mt-10">
+      <div
+        class="w-11/12 mx-auto flex flex-col lg:flex-row gap-10 lg:gap-0 justify-between items-center lg:items-start"
+      >
+        <div
+          class="flex flex-col justify-center items-center lg:justify-start lg:items-start"
+        >
+          <div class="flex gap-1 items-center mb-4">
+            <img class="w-[32px]" src="images/logo.png" alt="" />
+            <h1 class="text-3xl font-black">Peddy</h1>
+          </div>
+          <p class="mb-2 text-center lg:text-left">
+            Location: Sector 10, Road 15, Uttara, Dhaka<br />House #1
+          </p>
+          <p class="mb-2">Phone: +8801706467175</p>
+          <p class="mb-4">Email: rizwansiddiqui021@gmail.com</p>
+          <div class="flex gap-6">
+            <a target="_blank" href="https://www.instagram.com/?hl=en"
+              ><img class="w-10" src="images/instagram.png" alt=""
+            /></a>
+            <a target="_blank" href="https://www.facebook.com/rizwansiddiqui021"
+              ><img class="w-10" src="images/facebook.png" alt=""
+            /></a>
+            <a target="_blank" href="https://www.youtube.com/@RizwanSiddiqui021"
+              ><img class="w-10" src="images/youtube.png" alt=""
+            /></a>
+            <a target="_blank" href="https://www.pinterest.com/"
+              ><img class="w-10" src="images/pinterest.png" alt=""
+            /></a>
+          </div>
+        </div>
+        <div class="w-full border-t border-gray-500 block lg:hidden"></div>
+        <div
+          class="flex flex-col justify-center items-center lg:justify-start lg:items-start"
+        >
+          <h2 class="text-lg font-bold mb-4">Useful Links</h2>
+          <a class="text-[#FFFFFF99] mb-2" href="#">Home</a>
+          <a class="text-[#FFFFFF99] mb-2" href="#">Animals</a>
+          <a class="text-[#FFFFFF99] mb-2" href="#">Contact</a>
+          <a class="text-[#FFFFFF99] mb-2" href="#">About Us</a>
+          <a class="text-[#FFFFFF99]" href="#">Foundation</a>
+        </div>
+        <div class="w-full border-t border-gray-500 block lg:hidden"></div>
+        <div
+          class="flex flex-col justify-center items-center lg:justify-start lg:items-start"
+        >
+          <h2 class="text-lg font-bold mb-4">Drop A Message</h2>
+          <input
+            class="w-full mb-4 p-2 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500"
+            type="email"
+            placeholder="Enter your email"
+            required
+          />
+          <button
+            class="w-full p-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-all"
+            type="submit"
+          >
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </footer>
+    <!-- footer-end -->
+    <script src="scripts/mainScript.js"></script>
+  </body>
+</html>
